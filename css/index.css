@@ -1,0 +1,261 @@
+* { 
+    box-sizing: border-box; 
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.game-page {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-block {
+    /* margin: auto; */
+    width: 532px;
+    position: relative;
+}
+
+.main-block-field {
+    display: grid;
+    grid-template-rows: repeat(12, 40px);
+    gap: 4px;
+
+    padding: 4px 0;
+
+    border: 1px solid #636363;
+    border-radius: 2px;
+}
+
+.field-line {
+    display: grid;
+    gap: 4px;
+    grid-template-columns: repeat(12, 40px);
+    grid-template-rows: repeat(12, 40px);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.field-cell {
+    border: 1px solid #7f7f7f;
+    border-radius: 1px;
+    background-color: #ffffff;
+
+    cursor: pointer;
+
+    font: normal normal bold 20px/24px Roboto, sans-serif;
+    letter-spacing: 0px;
+    color: #707070;
+}
+
+.focused-cell {
+    box-shadow: 0 0 5px 2px #ffeb3b;
+}
+
+.closed-field-cell {
+    background-color: #bbbbbb;
+}
+
+
+.bomb, .flag {
+    width: 40px;
+    height: 40px;
+}
+
+
+.bomb {
+    background: transparent url('../svg/bomb.svg') 0% 0% no-repeat;
+    background-color: #C42828;
+    background-position: center;
+}
+
+.flag {
+    background: transparent url('../svg/flag.svg') 0% 0% no-repeat;
+    background-position: center;
+}
+
+
+/* 
+    MENU BAR
+*/
+
+.main-block-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 50px;
+    border: 1px solid #636363;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 0 20px 0 2px;
+
+    text-align: center;
+}
+
+.reset-btn {
+    width: 42px;
+    height: 42px;
+
+    font-size: x-large;
+    cursor: pointer;
+
+    color: #C42828;
+    border: 2px solid #C42828;
+    background-color: #ffffff;
+    border-radius: 6px;
+    outline: none;
+}
+.reset-btn:active {
+    color: #ffffff;
+    background-color: #C42828;
+    border-color: #ffffff;
+    box-shadow: 0 0 2px 0px #2a2a2a;
+}
+
+
+.game-info {
+    /* line-height: 45px; */
+}
+
+.flags-amount::before {
+    content: url(../svg/flag.svg);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.flags-amount {
+    margin-right: 20px;
+}
+
+.game-time::before {
+    content: "\0023F1";
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+
+/* 
+
+    DIGITS
+
+*/
+
+.one { color: #1668b9; }
+.two { color: #388e3c; }
+.three { color: #d33231; }
+.four { color: #7b1fa2; }
+.five { color: #bd0f75; }
+.six { color: #c3d331; }
+.seven { color: #df720d; }
+.eight { color: #000000; }
+
+.one, .two, .three, .four,
+.five, .six, .seven, .eight {
+    line-height: 40px;
+}
+
+
+
+/* 
+
+    result-board
+
+*/
+
+.result-board {
+    border: 1px solid #636363;
+    border-radius: 4px;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-color: white;
+    transition: 0.4s;
+    padding: 20px;
+}
+.active-result-board {
+    transform: translate(50%, -50%) scale(0);
+}
+
+.results {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -45%);
+}
+
+.main-result {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.extra-results {
+    font-size: 14px;
+    text-align: left;
+}
+
+.extra-results > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 20px;
+}
+
+.close-board-btn {
+    background: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: large;
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #C42828;
+}
+
+
+/* 
+
+    ---- HELP-NOTE ----
+
+*/
+
+.help-note {
+    width: 250px;
+    margin-top: 60px;
+    margin-left: 50px;
+    border: 1px solid #4a4a4a;
+    border-radius: 2px;
+    padding: 8px;
+
+}
+
+.help-note-list {
+    padding: 8px;
+    margin: 0;
+    list-style: none;
+}
+.help-note-list > li {
+    margin-bottom: 25px;
+}
+
+.msg-note {
+    font-style: italic;
+    color: #4a4a4a;
+    margin-bottom: 5px;
+}
+
+.keys-control {
+    font-size: 14px;
+    color: #C42828;
+}

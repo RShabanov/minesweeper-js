@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/index.css" />
+    <title>Mine Sweeper</title>
+</head>
+<body>
+    <div class="game-page">
+        <main class="main-block">
+            <div class="main-block-menu">
+                <div class="reset">
+                    <button class="reset-btn">&circlearrowleft;</button>
+                </div>
+                <div class="game-info">
+                    <span class="flags-amount"></span>
+                    <span class="game-time"></span>
+                </div>
+            </div>
+            <div class="main-block-field">
+            </div>
+            <div class="result-board active-result-board">
+                <button class="close-board-btn">&#10006;</button>
+                <div class="results">
+                    <div class="main-result">Долго Вас собирали по кусочкам...</div>
+                    <div class="extra-results">
+                        <div class="game-time-result">
+                            <span>Время:</span>
+                            <span class="time-result-value"></span>
+                        </div>
+                        <div class="cell-opened-result">
+                            <span>Ячеек открыто:</span>
+                            <span class="cell-amount-result"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <div class="help-note">
+            <ul class="help-note-list">
+                <li>
+                    <div class="msg-note">
+                        Для передвижения по полю используйте клавиши:
+                    </div>
+                    <div class="keys-control">
+                        W, S, A, D или Up, Down, Left, Right
+                    </div>
+                </li>
+                <li>
+                    <div class="open-cell-control">
+                        <div class="msg-note">Чтобы открыть ячейку нажмите:</div> 
+                        <div class="keys-control">Enter или Space</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bomb-set-control">
+                        <div class="msg-note">Для установки или снятия флажка нажмите:</div>
+                        <div class="keys-control">Ctrl + Enter или Ctrl + Space</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bomb-set-control">
+                        <div class="msg-note">Для перезапуска нажмите:</div>
+                        <div class="keys-control">R</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script defer type="module" src="js/game.js"></script>
+</body>
+</html>
