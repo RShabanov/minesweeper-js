@@ -1,3 +1,3 @@
 # minesweeper-js
 
-### https://shabanovr.github.io/minesweeper-js/
+### https://rshabanov.github.io/minesweeper-js/
